@@ -45,7 +45,7 @@ switch (command) {
 
 
 //movie retrieval from OMDB
-function doMovie() {
+function doMovie(argument) {
     if (!argument) {
         argument = "Mr. Nobody"
     }
@@ -71,7 +71,7 @@ function doMovie() {
     })
 }
 
-function doSpotify() {
+function doSpotify(argument) {
     var spotify = new Spotify(keys.spotify);
     if (!argument) {
         argument = "Good Christians Don't Get Jiggy With It 'Til After Marriage"
@@ -98,7 +98,7 @@ function doSpotify() {
     )
 }
 
-function doConcert() {
+function doConcert(argument) {
     if (!argument) {
         console.log("enter an argument")
     }
@@ -126,14 +126,15 @@ function doConcert() {
 function doWhat() {
     fs.readFile("random.txt", "utf8", function (error, data) {
         if (error) {
-            console.log(error);
+            return console.log(error);
         }
 
-        var arr = data.split(", ");
+        var arr = data.split(",");
+        console.log(arr);
+        console.log(arr[1]);
 
         if (arr[0] === "spotify-this-song") {
-            var getSong = arr[1].slice(1, -1);
-            doSpotify(getSong);
+            doSpotify(arr[1]);
         }
         else if (arr[0] === "movie-this") {
             var getMovie = arr[1].slice(1, -1);

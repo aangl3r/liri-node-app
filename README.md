@@ -24,3 +24,13 @@ about the artists upcoming shows to the console.
 
 If no argument is entered, a simple error message is returned  
 ![](assets/images/concert-this-error.JPG)
+
+***Do What It Says  
+Screenshot of the do-what-it-says functionality working with spotify-this-song  
+![](assets/images/do-what-it-says-spotify.JPG)  
+
+Screenshot of the do-what-it-says functionality working with movie-this    
+![](assets/images/do-what-it-says-omdb.JPG)  
+
+Screenshot of the do-what-it-says functionality working with concert-this    
+![](assets/images/do-what-it-says-concert.JPG)  
